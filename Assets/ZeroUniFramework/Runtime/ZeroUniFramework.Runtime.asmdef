@@ -1,0 +1,16 @@
+{
+    "name": "ZeroUniFramework.Runtime",
+    "rootNamespace": "ZeroUniFramework.Runtime",
+    "references": [
+        "GUID:5f543d8303009bb4fab77442accccb38"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
