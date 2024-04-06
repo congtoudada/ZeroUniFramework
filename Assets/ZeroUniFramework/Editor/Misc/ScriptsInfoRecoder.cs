@@ -8,7 +8,7 @@
 using System;
 using System.IO;
 
-namespace Zero.Editor
+namespace ZeroUniFramework.Editor
 {
     /// <summary>
     /// 填充脚本中关于日期的注释
