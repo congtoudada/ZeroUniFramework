@@ -166,11 +166,10 @@ namespace ZeroUniFramework.Runtime
 
         private string PreProcessMsg(string msg)
         {
-            if (_config != null)
-            {
-                return $"{_config.prefix}{msg}";
-            }
-
+            // if (_config != null)
+            // {
+            //     return $"{_config.prefix}{msg}";
+            // }
             return msg;
         }
         

@@ -14,16 +14,21 @@ using ZeroUniFramework.Runtime;
 public class SampleSystem :  ZeroAbstractSystem
 {
   public override int Priority => -1;
+
+  public bool enableLog = false;
+  
   public override void OnInit()
   {
     base.OnInit();
-    #region 日志系统演示
-    ZLogger.Debug("Debug");
-    ZLogger.Info("Info");
-    ZLogger.Warn("Warning");
-    // ZLogger.Error("Error");
-    // ZLogger.Fatal("Fatal");
-    ZLogger.Log("Log", LogLevel.Debug);
-    #endregion
+    
+    if (enableLog)
+    {
+      ZLogger.Debug("Debug");
+      ZLogger.Info("Info");
+      ZLogger.Warn("Warning");
+      // ZLogger.Error("Error");
+      // ZLogger.Fatal("Fatal");
+      ZLogger.Log("Log", LogLevel.Debug);
+    }
   }
 }

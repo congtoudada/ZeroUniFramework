@@ -34,7 +34,7 @@ namespace ZeroUniFramework.Runtime
         /// </summary>
         public virtual void OnInit()
         {
-            Debug.Log("[ Zero ] 启动系统: " + gameObject.name + "System - Priority: " + this.Priority);
+            ZLogger.Info("[ Zero ] 启动系统: " + gameObject.name + "System - Priority: " + this.Priority);
         }
 
         public virtual void OnDeInit()

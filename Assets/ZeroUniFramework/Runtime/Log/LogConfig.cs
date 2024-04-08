@@ -22,8 +22,8 @@ namespace ZeroUniFramework.Runtime
         [Header("选择指定tag打印，为空表示全部打印"), FoldoutGroup("日志全局配置")]
         public List<int> selectTag = new List<int>() { 0 };
         
-        [Header("固定打印前缀"), FoldoutGroup("日志全局配置")]
-        public string prefix = "";
+        // [Header("固定打印前缀"), FoldoutGroup("日志全局配置")]
+        // public string prefix = "";
         
         [Header("是否记录栈顶信息"), FoldoutGroup("日志全局配置")]
         public bool enableStackTopInfo = true;

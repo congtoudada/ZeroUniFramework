@@ -545,3 +545,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9547ccdb67801a544b747c85f6e430d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableLog: 0

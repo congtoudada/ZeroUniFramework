@@ -23,8 +23,7 @@ MonoBehaviour:
     SerializationNodes: []
   filterLevel: -1
   selectTag: 00000000
-  prefix: '[ Zero ] '
   enableStackTopInfo: 1
-  enableLog4net: 1
+  enableLog4net: 0
   log4netConfigPath: ${Streaming}/ZeroUniFramework/Log/log4net.xml
   log4netOutput: ${Streaming}/ZeroUniFramework/Log/Output
