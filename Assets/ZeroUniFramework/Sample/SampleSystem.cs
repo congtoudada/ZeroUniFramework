@@ -23,12 +23,11 @@ public class SampleSystem :  ZeroAbstractSystem
     
     if (enableLog)
     {
-      ZLogger.Debug("Debug");
-      ZLogger.Info("Info");
-      ZLogger.Warn("Warning");
+      Log.Debug("Debug");
+      Log.Info("Info");
+      Log.Warn("Warning");
       // ZLogger.Error("Error");
       // ZLogger.Fatal("Fatal");
-      ZLogger.Log("Log", LogLevel.Debug);
     }
   }
 }

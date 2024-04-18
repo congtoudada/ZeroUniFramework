@@ -48,11 +48,5 @@ namespace ZeroUniFramework
         /// </summary>
         /// <param name="message"></param>
         void Fatal(object message);
-        /// <summary>
-        /// 打印指定日志等级的日志（默认Debug）
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="level"></param>
-        void Log(object message, LogLevel level = LogLevel.Debug);
     }
 }

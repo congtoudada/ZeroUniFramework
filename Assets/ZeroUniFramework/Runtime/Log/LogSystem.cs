@@ -3,7 +3,7 @@
   作者：聪头
   邮箱：1322080797@qq.com
   日期：2024年04月03日 22:19:57
-  功能：
+  功能：格式化Debug.Log，并监听输出，重定向到其他日志工具（log4net）
 *****************************************************/
 
 using System;
@@ -54,13 +54,13 @@ namespace ZeroUniFramework.Runtime
                     //Application.logMessageReceivedThreaded -= LogHandle;
                 };
             }
-            ZLogger.Instance.SetLogger(_unityLogger).SetConfig(config);;
+            Log.Instance.SetLogger(_unityLogger).SetConfig(config);;
             
         }
 
         private void LogHandle(string condition, string stacktrace, LogType type)
         {
-            if (ZLogger.Instance.LogType == LogLevel.None)
+            if (Log.Instance.LogType == LogLevel.None)
             {
                 return;
             }
@@ -78,16 +78,9 @@ namespace ZeroUniFramework.Runtime
             }  
             if (config.enableStackTopInfo)
             {
-                if (ZLogger.Instance.IsCallLog)
-                {
-                    msg += "\n" + stacktrace.Split('\n')[6];;
-                }
-                else
-                {
-                    msg += "\n" + stacktrace.Split('\n')[4];;
-                }
+                msg += "\n" + stacktrace.Split('\n')[4];;
             }
-            switch (ZLogger.Instance.LogType)
+            switch (Log.Instance.LogType)
             {
                 case LogLevel.Debug:
                     _loggerManager.Debug(msg);

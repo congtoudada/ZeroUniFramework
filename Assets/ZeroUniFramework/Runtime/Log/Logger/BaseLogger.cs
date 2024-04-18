@@ -15,27 +15,5 @@ namespace ZeroUniFramework.Runtime
         public abstract void Warn(object message);
         public abstract void Error(object message);
         public abstract void Fatal(object message);
-
-        public void Log(object message, LogLevel level = LogLevel.Debug)
-        {
-            switch(level)
-            {
-                case LogLevel.Debug:
-                    Debug(message);
-                    break;
-                case LogLevel.Info:
-                    Info(message);
-                    break;
-                case LogLevel.Warn:
-                    Warn(message);
-                    break;
-                case LogLevel.Error:
-                    Error(message);
-                    break;
-                case LogLevel.Fatal:
-                    Fatal(message);
-                    break;
-            }
-        }
     }
 }

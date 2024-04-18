@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185f6993d5150494d98da50e26cb1c25, type: 3}
+  m_Name: AssetBundleCollectorSetting
+  m_EditorClassIdentifier: 
+  ShowPackageView: 0
+  ShowEditorAlias: 0
+  UniqueBundleName: 0
+  Packages:
+  - PackageName: DefaultPackage
+    PackageDesc: 
+    EnableAddressable: 0
+    LocationToLower: 0
+    IncludeAssetGUID: 0
+    IgnoreDefaultType: 1
+    AutoCollectShaders: 1
+    Groups:
+    - GroupName: Actor
+      GroupDesc: "\u89D2\u8272"
+      AssetTags: Actor
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackAssets/Actors
+        CollectorGUID: 39b1d850879aa9e49886c26dc5308a66
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Audios
+      GroupDesc: "\u97F3\u4E50"
+      AssetTags: Audios
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Configs
+      GroupDesc: "\u914D\u7F6E"
+      AssetTags: Configs
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: DLL
+      GroupDesc: "\u4EE3\u7801"
+      AssetTags: DLL
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Effects
+      GroupDesc: "\u7279\u6548"
+      AssetTags: Effects
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Fonts
+      GroupDesc: "\u5B57\u4F53"
+      AssetTags: Fonts
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Materials
+      GroupDesc: "\u6750\u8D28"
+      AssetTags: Materials
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Other
+      GroupDesc: "\u5176\u4ED6"
+      AssetTags: Other
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Scenes
+      GroupDesc: "\u573A\u666F"
+      AssetTags: Scenes
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Shaders
+      GroupDesc: "\u7740\u8272\u5668"
+      AssetTags: Shaders
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: Textures
+      GroupDesc: "\u7EB9\u7406"
+      AssetTags: Textures
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: UI
+      GroupDesc: "\u7528\u6237\u754C\u9762"
+      AssetTags: UI
+      ActiveRuleName: EnableGroup
+      Collectors: []
+    - GroupName: UIRaw
+      GroupDesc: "\u56FE\u7247\u8D44\u6E90"
+      AssetTags: UIRaw
+      ActiveRuleName: EnableGroup
+      Collectors: []

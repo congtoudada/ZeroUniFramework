@@ -1,5 +1,5 @@
 ﻿/****************************************************
-  文件：Logger.cs
+  文件：Log.cs
   作者：聪头
   邮箱：1322080797@qq.com
   日期：2024年04月05日 19:53:34
@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace ZeroUniFramework.Runtime
 {
-    public class ZLogger : LazySingleton<ZLogger>
+    public class Log : LazySingleton<Log>
     {
         private ILogger _logger = null;
         private LogConfig _config = null;
@@ -20,13 +20,7 @@ namespace ZeroUniFramework.Runtime
             private set;
         } = LogLevel.None;
 
-        public bool IsCallLog
-        {
-            get;
-            private set;
-        } = false;
-
-        private ZLogger()
+        private Log()
         {
         }
 
@@ -56,22 +50,17 @@ namespace ZeroUniFramework.Runtime
         {
             Instance._Fatal(message, tag);
         }
-
-        public static void Log(object message, LogLevel level = LogLevel.Debug, int tag = 0)
-        {
-            Instance._Log(message, level, tag);
-        }
         #endregion
         
         #region 框架内部
 
-        public ZLogger SetLogger(ILogger logger)
+        public Log SetLogger(ILogger logger)
         {
             _logger = logger;
             return Instance;
         }
 
-        public ZLogger SetConfig(LogConfig config)
+        public Log SetConfig(LogConfig config)
         {
             _config = config;
             return Instance;
@@ -121,30 +110,6 @@ namespace ZeroUniFramework.Runtime
             LogType = LogLevel.Fatal;
             _logger.Fatal(PreProcessMsg(message.ToString()));
             LogType = LogLevel.None;
-        }
-
-        private void _Log(object message, LogLevel level = LogLevel.Debug, int tag = 0)
-        {
-            IsCallLog = true;
-            switch(level)
-            {
-                case LogLevel.Debug:
-                    Debug(message, tag);
-                    break;
-                case LogLevel.Info:
-                    Info(message, tag);
-                    break;
-                case LogLevel.Warn:
-                    Warn(message, tag);
-                    break;
-                case LogLevel.Error:
-                    Error(message, tag);
-                    break;
-                case LogLevel.Fatal:
-                    Fatal(message, tag);
-                    break;
-            }
-            IsCallLog = false;
         }
 
         private bool Check(LogLevel level, int tag)
